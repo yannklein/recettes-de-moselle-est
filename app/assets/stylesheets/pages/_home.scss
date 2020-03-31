@@ -12,7 +12,7 @@
 
 .home-title {
   height: calc(100vh - 56px);
-  padding-left: 64px;
+  padding: 0px 64px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -44,6 +44,7 @@
 
 @media (max-width: 800px) {
   .home-title {
+    padding: 0px 32px;
     h1 {
       font-size: 32px;
     }
@@ -54,7 +55,6 @@
       display: flex;
       flex-direction: column;
       justify-content: center;
-      align-items: center;
     }
   }
 }
