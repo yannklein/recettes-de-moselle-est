@@ -1,6 +1,6 @@
 .button-white {
   background-color: white;
-  padding: 16px 24px;
+  padding: 16px;
   color: black;
   font-size: 16px;
   font-weight: lighter;
@@ -19,4 +19,14 @@
   text-decoration: none;
   background-color: rgba(240,240,240,1);
   box-shadow: 0 8px 8px rgba(0,0,0,0.4);
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 800px) {
+  .button-white {
+    padding: 8px;
+    width: 200px;
+  }
 }
