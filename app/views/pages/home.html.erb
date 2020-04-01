@@ -4,7 +4,7 @@
   <h1>Recettes de Moselle-Est</h1>
   <p>Une belle initiative pour conserver les recettes de nos grand-mères et notre culture Est-mosellane.</p>
   <div class="buttons">
-    <a href="#" class="button-white">Partagez vos recettes</a>
-    <a href="#" class="button-white">Decouvrez des recettes</a>
+    <%= link_to "Partagez vos recettes", new_recipe_path, class: "button-white" %>
+    <%= link_to "Decouvrez des recettes", recipes_path, class: "button-white" %>
   </div>
 </div>

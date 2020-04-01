@@ -3,5 +3,8 @@ class User < ApplicationRecord
   # :confirmable, :lockable, :timeoutable, :trackable and :omniauthable
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
+  has_many :recipes
   has_one_attached :photo
+  geocoded_by :location
+  after_validation :geocode, if: :will_save_change_to_location?
 end
