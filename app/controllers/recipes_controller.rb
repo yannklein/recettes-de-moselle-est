@@ -1,6 +1,7 @@
 class RecipesController < ApplicationController
   def index
     @users = User.all # returns flats with coordinates
+    @recipes = Recipe.all
 
     @geojson = []
     @users.each do |user|

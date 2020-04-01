@@ -5,18 +5,25 @@
   font-size: 16px;
   font-weight: lighter;
   border-radius: 4px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.8);
+  border: 2px solid white;
   display: inline-block;
   text-decoration: none;
   margin-right: 24px;
   margin-bottom: 24px;
   text-align: center;
-  width: 240px;
+  backdrop-filter: blur(0px);
 }
 
 .button-white:hover {
   color: black;
   text-decoration: none;
+}
+
+.button-boxshadow {
+  box-shadow: 0 0 8px rgba(0,0,0,0.8);
+}
+
+.button-boxshadow:hover {
   background-color: rgba(240,240,240,1);
   box-shadow: 0 8px 8px rgba(0,0,0,0.4);
 }

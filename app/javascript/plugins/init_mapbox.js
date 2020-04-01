@@ -25,6 +25,7 @@ const createMarker = (data, map, markerIcon) => {
       <h3>
         ${marker.properties.title }
       </h3>
+      ${(popupContent.length === 0) ? `<p class="no-recipe">Pas encore de recette!</p>` : ""}
       <div class="marker-recipe">
         ${popupContent.join("")}
       </div>`;
@@ -53,17 +54,6 @@ const fetchMarkers = (map, markerIcon) => {
 const initMapbox = (mapboxElement) => {
   const markerIcon = mapboxElement.dataset.icon;
   mapboxgl.accessToken = 'pk.eyJ1IjoieWFubmx1Y2tsZWluIiwiYSI6ImNqcnZmeHQwaDAxb2o0NGx2bG1tOWgwNGIifQ.q4zhKOCoH7nDIJNm88leXg';
-  // const mapStyle = {'overlay': {
-  //       'type': 'image',
-  //       'url': mapboxElement.dataset.moselle,
-  //       'coordinates': [
-  //       [6.5527641, 49.3983839],
-  //       [6.4527641, 49.1983839],
-  //       [6.4527641, 49.0983839],
-  //       [6.5527641, 49.0983839]
-  //       ]
-  //     }
-  //   };
   const map = new mapboxgl.Map({
     container: 'map',
     style: 'mapbox://styles/mapbox/streets-v11',

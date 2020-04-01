@@ -1,3 +1,31 @@
 .card-recipe {
-
+  border: 2px solid white;
+  background-color: rgba(255,255,255,0.5);
+  padding: 16px;
+  color: black;
+  border-radius: 4px;
+  width: 50%;
+  position: relative;
+  margin-bottom: 16px;
+  backdrop-filter: blur(4px);
+  a {
+    display: flex;
+    text-decoration: none;
+    color: black;
+    &:hover h3 {
+      text-decoration: underline;
+    }
+  }
+  .avatar-large {
+    position: absolute;
+    top: calc(80px - 20px);
+    left: 140px;
+  }
+  .card-recipe-img {
+    margin-right: 40px;
+    width: 160px;
+    height: 160px;
+    object-fit: cover;
+    object-position: 50% 50%;
+  }
 }

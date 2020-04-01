@@ -1,14 +1,30 @@
-<div id="map" data-moselle="<%= asset_path('carte-moselle.png') %>" data-icon="<%= asset_path('faience.png') %>"></div>
-<div class="container">
+<div id="map" data-moselle="<%= asset_path('carte-moselle.png') %>" data-icon="<%= asset_path('faience.png') %>">
+</div>
+
+<div class="app-container">
   <div class="recipes-header">
-    <input class="searchbar-white">
+    <div>
+      <input class="searchbar-white" placeholder="Krümpakischel de courgette">
+      <%= link_to "Cherchez", recipes_path, class: "button-white" %>
+    </div>
     <div class="recipes-filters">
       <div class="button-translucid"></div>
     </div>
   </div>
   <div class="recipes-body">
     <div class="recipes-list">
-      <div class="card-recipe"></div>
+      <% @recipes.each do |recipe| %>
+        <div class="card-recipe">
+          <%= link_to recipe_path(recipe) do %>
+            <%= cl_image_tag recipe.photo.key, width: 160, height: 160, alt: recipe.name, class: "card-recipe-img"%>
+            <%= cl_image_tag recipe.user.photo.key, alt: recipe.name, class: "avatar-large avatar-bordered"%>
+            <div>
+              <h3><%= recipe.name %></h3>
+              <p><%= recipe.description %></p>
+            </div>
+          <% end %>
+        </div>
+      <% end %>
     </div>
   </div>
 </div>

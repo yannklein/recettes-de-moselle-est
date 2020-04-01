@@ -72,5 +72,35 @@ recipe = Recipe.new(
 )
 recipe.photo.attach(io: file, filename: 'recipe.jpg', content_type: 'image/jpg')
 recipe.save
+
+file = URI.open('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fstatic.750g.com%2Fimages%2F622-auto%2F5dcf2b12d963c2ae23bd03f71571e2cb%2Fgalette-de-pommes-de-terre-facile.jpeg&f=1&nofb=1')
+recipe = Recipe.new(
+  name: 'Krumpakischle',
+  description: 'Une recette simple mais bonne que m\'appris ma mère. Rien de meilleur que de remplacer un peu de pomme de terres avec des courgettes.',
+  country: bassin_houiller,
+  category: plat_principal,
+  user: User.last,
+  ingredient: [{'Pommes de terre': "7",
+                'Oeufs': "1",
+                'Poivre': "",
+                'Sel': "",
+                'Farine': '1 cuillère à soupe',
+                'Oignon': '3',
+                'Huile': ''
+              }],
+  prep_time: 25,
+  cook_time: 10,
+  prep_step: [
+              "Éplucher les pommes de terre et l'oignon et les râper finement. Il faut retirer l'excédent d'eau.",
+              "Ajouter la farine, l’œuf, un peu de sel et de poivre. Bien mélanger l'ensemble.",
+              "Dans une poêle, porter à ébullition un peu d'huile puis y déposer 4 cuillères à soupe de la préparation.",
+              "Faire bien dorer les galettes d'un côté, les retourner et laisser dorer sur l'autre face. Les sortir.",
+              "Recommencer jusqu'à épuisement de la pâte.",
+              "Disposer les galettes sur un plat de service. Les servir bien chaudes avec une sauce aux champignons."
+            ],
+  guests_amount: 4
+)
+recipe.photo.attach(io: file, filename: 'recipe.jpg', content_type: 'image/jpg')
+recipe.save
 puts "Seeded!"
 
