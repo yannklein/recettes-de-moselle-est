@@ -24,7 +24,11 @@
           <div class="card-recipe">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-recipe-img">
-                <%= cl_image_tag recipe.photo.key, width: 160, height: 160, crop: :fill, alt: recipe.name%>
+                <% if recipe.photo.attached? %>
+                  <%= cl_image_tag recipe.photo.key, width: 160, height: 160, crop: :fill, alt: recipe.name%>
+                <% else %>
+                  <%= image_tag "https://g.foolcdn.com/editorial/images/167482/vegetables-colorful-array.jpg", width: 160, height: 160, alt: recipe.name, style: "object-fit: cover;"%>
+                <% end %>
               </div>
               <%= cl_image_tag recipe.user.photo.key, alt: recipe.name, class: "avatar-large avatar-bordered"%>
               <div class="card-recipe-info">

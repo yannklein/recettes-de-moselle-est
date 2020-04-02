@@ -1,5 +1,9 @@
 <div class="banner">
-  <%= cl_image_tag @recipe.photo.key, alt: @recipe.name %>
+  <% if @recipe.photo.attached? %>
+    <%= cl_image_tag @recipe.photo.key, alt: @recipe.name %>
+  <% else %>
+    <%= image_tag "https://g.foolcdn.com/editorial/images/167482/vegetables-colorful-array.jpg", alt: @recipe.name%>
+  <% end %>
   <div class="banner-title">
     <h1><%= @recipe.name %></h1>
     <div class="banner-owner">
