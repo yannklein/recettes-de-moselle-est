@@ -15,7 +15,7 @@ class RecipesController < ApplicationController
       recipe_list = user.recipes.map do |recipe|
         { name: recipe.name,
           description: recipe.description,
-          photo: url_for(recipe.photo),
+          photo: url_for(recipe.photo.attached? ? recipe.photo : "https://3.bp.blogspot.com/-nYA0bHCYhwU/U4K3jCjis0I/AAAAAAAAAEk/KcvLAZa_SJA/s1600/healthy-food-stocks.jpeg"),
           url: "recipes/#{recipe.id}" }
       end
       @geojson << {
