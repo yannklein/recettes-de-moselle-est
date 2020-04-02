@@ -17,3 +17,9 @@
   box-shadow: 0 1px 2px rgba(0,0,0,0.2);
   border: white 1px solid;
 }
+
+@media (max-width: 800px) {
+  .avatar-large {
+    width: 32px;
+  }
+}

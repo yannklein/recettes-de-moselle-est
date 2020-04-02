@@ -1,12 +1,5 @@
 @import url(https://api.mapbox.com/mapbox-gl-js/v1.4.1/mapbox-gl.css);
 
-#map {
-  position: fixed;
-  width: 100vw;
-  height: 100vh;
-  top: 0px;
-}
-
 .marker {
   background-size: cover;
   width: 48px;
@@ -91,3 +84,5 @@
   font-size: 24px;
   padding: 10px;
 }
+
+

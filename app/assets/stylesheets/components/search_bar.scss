@@ -10,6 +10,9 @@
   text-decoration: none;
   width: 50%;
   backdrop-filter: blur(4px);
+  margin-right: 8px;
+  margin-bottom: 16px;
+  z-index: 3;
 }
 
 @media (max-width: 1000px) {

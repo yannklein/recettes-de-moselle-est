@@ -8,6 +8,7 @@
   position: relative;
   margin-bottom: 16px;
   backdrop-filter: blur(4px);
+  z-index: 3;
   a {
     display: flex;
     text-decoration: none;
@@ -18,14 +19,49 @@
   }
   .avatar-large {
     position: absolute;
-    top: calc(80px - 20px);
-    left: 140px;
+    top: calc(80px - 18px);
+    left: calc(160px - 18px);
   }
   .card-recipe-img {
-    margin-right: 40px;
+    margin-right: calc(36px + 16px);
     width: 160px;
     height: 160px;
-    object-fit: cover;
-    object-position: 50% 50%;
+  }
+  .card-recipe-short-desc {
+    display: none;
+    margin: 0;
+  }
+}
+
+@media (max-width: 1000px) {
+}
+
+@media (max-width: 800px) {
+  .card-recipe {
+    width: 100%;
+    padding: 8px;
+    .avatar-large {
+      position: absolute;
+      top: calc(32px - 8px);
+      left: calc(64px - 8px);
+    }
+    .card-recipe-img {
+      margin-right: calc(16px + 8px);
+      width: 64px;
+      height: 64px;
+      img {
+        width: 64px;
+        height: 64px;
+      }
+    }
+    h3 {
+      font-size: 24px;
+    }
+    .card-recipe-short-desc {
+      display: block;
+    }
+    .card-recipe-long-desc {
+      display: none;
+    }
   }
 }

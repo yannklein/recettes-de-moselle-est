@@ -1,30 +1,42 @@
-<div id="map" data-moselle="<%= asset_path('carte-moselle.png') %>" data-icon="<%= asset_path('faience.png') %>">
+<div class="recipes-map" id="map" data-moselle="<%= asset_path('carte-moselle.png') %>" data-icon="<%= asset_path('faience.png') %>">
 </div>
-
-<div class="app-container">
+<div class="recipes-container">
   <div class="recipes-header">
-    <div>
-      <input class="searchbar-white" placeholder="Krümpakischel de courgette">
-      <%= link_to "Cherchez", recipes_path, class: "button-white" %>
-    </div>
-    <div class="recipes-filters">
-      <div class="button-translucid"></div>
+    <div class="app-container">
+      <div>
+        <%= form_tag recipes_path, class: "form-inline", method: :get do %>
+          <%= text_field_tag :query, params[:query], class: "form-control, searchbar-white", placeholder: "Chercher une recette..."
+          %>
+          <%= submit_tag "Cherchez", class: "button-search" %>
+        <% end %>
+      </div>
+      <div class="recipes-filters">
+        <div class="button-translucid"></div>
+      </div>
     </div>
   </div>
+
   <div class="recipes-body">
-    <div class="recipes-list">
-      <% @recipes.each do |recipe| %>
-        <div class="card-recipe">
-          <%= link_to recipe_path(recipe) do %>
-            <%= cl_image_tag recipe.photo.key, width: 160, height: 160, alt: recipe.name, class: "card-recipe-img"%>
-            <%= cl_image_tag recipe.user.photo.key, alt: recipe.name, class: "avatar-large avatar-bordered"%>
-            <div>
-              <h3><%= recipe.name %></h3>
-              <p><%= recipe.description %></p>
-            </div>
+    <div class="app-container">
+      <div class="recipes-list">
+        <% @recipes.each do |recipe| %>
+          <% 3.times do %>
+          <div class="card-recipe">
+            <%= link_to recipe_path(recipe) do %>
+              <div class="card-recipe-img">
+                <%= cl_image_tag recipe.photo.key, width: 160, height: 160, crop: :fill, alt: recipe.name%>
+              </div>
+              <%= cl_image_tag recipe.user.photo.key, alt: recipe.name, class: "avatar-large avatar-bordered"%>
+              <div>
+                <h3><%= recipe.name %></h3>
+                <p class="card-recipe-long-desc"><%= recipe.description %></p>
+                <p class="card-recipe-short-desc"><%= "par #{recipe.user.first_name} #{recipe.user.last_name}" %></p>
+              </div>
+            <% end %>
+          </div>
           <% end %>
-        </div>
-      <% end %>
+        <% end %>
+      </div>
     </div>
   </div>
 </div>
