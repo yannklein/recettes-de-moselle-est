@@ -22,7 +22,7 @@ class RecipesController < ApplicationController
         type: 'Feature',
         geometry: {
           type: 'Point',
-          coordinates: [user.longitude, user.latitude]
+          coordinates: [user.longitude + (rand(10)-5)*0.001, user.latitude + (rand(10)-5)*0.001]
         },
         properties: {
           title: "Recettes de #{user.first_name} #{user.last_name}",
