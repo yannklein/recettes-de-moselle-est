@@ -16,12 +16,16 @@
     &:hover h3 {
       text-decoration: underline;
     }
+    .card-recipe-info {
+      width: 100%;
+    }
   }
   .avatar-large {
     position: absolute;
     top: calc(80px - 18px);
     left: calc(160px - 18px);
   }
+
   .card-recipe-img {
     margin-right: calc(36px + 16px);
     width: 160px;
@@ -55,7 +59,7 @@
       }
     }
     h3 {
-      font-size: 24px;
+      font-size: 16px;
     }
     .card-recipe-short-desc {
       display: block;

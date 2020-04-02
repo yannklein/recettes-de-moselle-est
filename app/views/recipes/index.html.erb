@@ -5,9 +5,9 @@
     <div class="app-container">
       <div>
         <%= form_tag recipes_path, class: "form-inline", method: :get do %>
-          <%= text_field_tag :query, params[:query], class: "form-control, searchbar-white", placeholder: "Chercher une recette..."
+          <%= text_field_tag :query, params[:query], class: "form-control, searchbar-white", placeholder: "Entrez un nom de recette..."
           %>
-          <%= submit_tag "Cherchez", class: "button-search" %>
+          <%= submit_tag "Chercher", class: "button-search" %>
         <% end %>
       </div>
       <div class="recipes-filters">
@@ -20,21 +20,21 @@
     <div class="app-container">
       <div class="recipes-list">
         <% @recipes.each do |recipe| %>
-          <% 3.times do %>
+          <%# 3.times do %>
           <div class="card-recipe">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-recipe-img">
                 <%= cl_image_tag recipe.photo.key, width: 160, height: 160, crop: :fill, alt: recipe.name%>
               </div>
               <%= cl_image_tag recipe.user.photo.key, alt: recipe.name, class: "avatar-large avatar-bordered"%>
-              <div>
+              <div class="card-recipe-info">
                 <h3><%= recipe.name %></h3>
                 <p class="card-recipe-long-desc"><%= recipe.description %></p>
                 <p class="card-recipe-short-desc"><%= "par #{recipe.user.first_name} #{recipe.user.last_name}" %></p>
               </div>
             <% end %>
           </div>
-          <% end %>
+          <%# end %>
         <% end %>
       </div>
     </div>
