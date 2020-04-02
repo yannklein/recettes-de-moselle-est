@@ -9,10 +9,21 @@
       <%= f.input :prep_time, label: 'Temps de preparation (en min):', required: true, as: :integer %>
       <%= f.input :cook_time, label: 'Temps de cuisson (en min):', required: true %>
       <%= f.input :guests_amount, label: 'Nombre de convives:', required: true, collection: 1..10 %>
-      <%= f.input :ingredient, label: 'Ingrédients:', required: true %>
-      <%= f.input :prep_step, label: 'Etapes de la préparation:', required: true %>
+      <div class="form-group">
+        <%= f.label 'Ingrédients:' %>
+        <ul class="ingr-input">
+        <%= f.input :ingredient, label: false, required: true, as: :array_ingredient %>
+        </ul>
+        <%= link_to "+ Ajouter un ingrédient", "#", class: "d-inline-block new-ingr-btn" %>
+      </div>
+      <div class="form-group">
+        <%= f.label 'Etapes de la préparation:' %>
+        <ol class="step-input">
+        <%= f.input :prep_step, label: false, required: true, as: :array %>
+        </ol>
+        <%= link_to "+ Ajouter une étape", "#", class: "d-inline-block new-step-btn" %>
+      </div>
       <%= f.input :photo, label: 'Et bien sûr, une belle photo👇', required: true, hint: "Utilisez une photo de bonne qualité ( plues de 800x600 pixels)" %>
       <%= f.button :submit, value: 'J\'ai fini!', class: 'button-white' %>
   <% end %>
 </div>
-
