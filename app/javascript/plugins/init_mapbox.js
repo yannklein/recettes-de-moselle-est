@@ -44,7 +44,7 @@ const createMarker = (data, map, markerIcon) => {
 }
 
 const fetchMarkers = (map, markerIcon) => {
-  fetch('./recipes.json')
+  fetch(`./recipes.json${window.location.search}`)
   .then(response => response.json())
   .then((data) => {
     createMarker(data, map, markerIcon);

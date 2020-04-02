@@ -1,7 +1,12 @@
 class RecipesController < ApplicationController
   def index
-    @users = User.all # returns flats with coordinates
-    @recipes = Recipe.all
+    if params[:query].present?
+      @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
+      @users = @recipes.map{|recipe| recipe.user}.uniq
+    else
+      @recipes = Recipe.all
+      @users = User.all
+    end
 
     @geojson = []
     @users.each do |user|
