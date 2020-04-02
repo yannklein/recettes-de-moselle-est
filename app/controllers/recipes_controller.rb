@@ -53,15 +53,18 @@ class RecipesController < ApplicationController
   end
 
   def edit
+    @recipe = Recipe.find(params[:id])
   end
 
   def update
     @recipe = Recipe.update(recipe_params)
-    @recipe.save
     redirect_to recipe_path(@recipe)
   end
 
-  def delete
+  def destroy
+    @recipe = Recipe.find(params[:id])
+    @recipe.delete
+    redirect_to recipes_path
   end
 
   private

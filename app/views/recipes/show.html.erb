@@ -6,7 +6,13 @@
       <p>Par <strong><%= @recipe.user.first_name %> <%= @recipe.user.last_name %></strong></p>
       <%= cl_image_tag @recipe.user.photo.key, alt: @recipe.user.last_name, class: 'avatar' %>
     </div>
-    <%= link_to "Imprimer la recette", recipe_path(@recipe), class: 'button-white'%>
+    <div class="d-flex">
+      <%= link_to "Imprimer la recette", recipe_path(@recipe), class: 'button-white'%>
+      <% if current_user === @recipe.user %>
+        <%= link_to "Modifier", edit_recipe_path(@recipe), class: 'button-white'%>
+        <%= link_to "Supprimer", recipe_path(@recipe), data: { confirm: "Are you sure?" }, method: :delete, class: 'button-white'%>
+      <% end %>
+    </div>
   </div>
 </div>
 <div class="app-container">
