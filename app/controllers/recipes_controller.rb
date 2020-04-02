@@ -40,17 +40,31 @@ class RecipesController < ApplicationController
   end
 
   def new
+    @recipe = Recipe.new
   end
 
   def create
+    @recipe = Recipe.new(recipe_params)
+    @recipe.user = current_user
+    @recipe.save
+    redirect_to recipe_path(@recipe)
   end
 
   def edit
   end
 
   def update
+    @recipe = Recipe.update(recipe_params)
+    @recipe.save
+    redirect_to recipe_path(@recipe)
   end
 
   def delete
+  end
+
+  private
+
+  def recipe_params
+    params.require(:recipe).permit(:name, :description, :photo, :prep_time, :prep_step, :cook_time, :ingredient, :guests_amount, :country, :category)
   end
 end

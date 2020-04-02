@@ -1,0 +1,17 @@
+<div class="recipe-form">
+  <h2 class="nrecipe-form-title"><%= title %></h2>
+  <%= simple_form_for recipe, html: {class: 'recipe-form-content'} do |f| %>
+      <%= f.error_notification %>
+      <%= f.input :name, label: 'Titre de votre recette:', required: true %>
+      <%= f.input :description, label: 'Une bonne description:', as: :text, :input_html => {:style => 'width: 100%', :rows => 3 }, required: true  %>
+      <%= f.input :prep_time, label: 'Temps de preparation (en min):', required: true, as: :integer %>
+      <%= f.input :cook_time, label: 'Temps de cuisson (en min):', required: true %>
+      <%= f.input :guests_amount, label: 'Nombre de convives:', required: true, collection: 1..10 %>
+      <%= f.input :ingredient, label: 'Ingrédients:', required: true %>
+      <%= f.input :prep_step, label: 'Etapes de la préparation:', required: true %>
+      <%= f.input :name, label: 'Titre de votre recette:', required: true %>
+      <%= f.input :photo, label: 'Et bien sûr, une belle photo👇', required: true, hint: "Utilisez une photo de bonne qualité ( plues de 800x600 pixels)" %>
+      <%= f.button :submit, value: 'J\'ai fini!', class: 'button-white' %>
+  <% end %>
+</div>
+
