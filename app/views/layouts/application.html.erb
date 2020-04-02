@@ -14,7 +14,7 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% unless current_page?('/recipes') %>
+    <% unless current_page?('/') %>
       <%= render 'shared/navbar' %>
     <% end %>
     <%= render 'shared/flashes' %>

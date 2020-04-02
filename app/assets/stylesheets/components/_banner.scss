@@ -1,0 +1,35 @@
+.banner {
+  display: flex;
+  width: 100%;
+  > img {
+    width: 50%;
+    height: 300px;
+    object-fit: cover;
+    filter: brightness(90%);
+  }
+  box-shadow: 0 8px 8px rgba(0,0,0,0.2);
+  margin-bottom: 40px;
+}
+
+.banner-title {
+  flex-direction: column;
+  display: flex;
+  justify-content: center;
+  margin-left: 64px;
+  align-items: end;
+  h1 {
+    margin-bottom: 16px;
+  }
+}
+
+.banner-owner {
+  display: flex;
+  align-items: center;
+  padding-bottom: 40px;
+  img {
+    margin-left: 16px;
+  }
+  p {
+    margin: 0;
+  }
+}

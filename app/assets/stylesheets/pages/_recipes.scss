@@ -9,7 +9,7 @@
 .recipes-container {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  height: calc(100vh - 65.11px);
 }
 
 .recipes-header {
@@ -27,6 +27,6 @@
     height: 440px;
   }
   .recipes-header {
-    margin-bottom: 320px;
+    margin-bottom: 260px;
   }
 }

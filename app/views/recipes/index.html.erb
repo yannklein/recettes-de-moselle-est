@@ -20,7 +20,7 @@
     <div class="app-container">
       <div class="recipes-list">
         <% @recipes.each do |recipe| %>
-          <%# 3.times do %>
+          <% 3.times do %>
           <div class="card-recipe">
             <%= link_to recipe_path(recipe) do %>
               <div class="card-recipe-img">
@@ -34,7 +34,7 @@
               </div>
             <% end %>
           </div>
-          <%# end %>
+          <% end %>
         <% end %>
       </div>
     </div>

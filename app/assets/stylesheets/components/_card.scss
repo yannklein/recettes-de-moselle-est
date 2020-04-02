@@ -37,14 +37,23 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1300px) {
+  .card-recipe {
+    padding: 8px;
+    h3 {
+      font-size: 24px;
+    }
+    p {
+      font-size: 16px;
+    }
+  }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .card-recipe {
-    width: 100%;
     padding: 8px;
     .avatar-large {
+      width: 32px;
       position: absolute;
       top: calc(32px - 8px);
       left: calc(64px - 8px);
@@ -67,5 +76,11 @@
     .card-recipe-long-desc {
       display: none;
     }
+  }
+}
+
+@media (max-width: 800px) {
+  .card-recipe {
+    width: 100%;
   }
 }

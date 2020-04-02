@@ -23,7 +23,7 @@ class RecipesController < ApplicationController
           coordinates: [user.longitude, user.latitude]
         },
         properties: {
-          title: "Les recettes de #{user.first_name} #{user.last_name}",
+          title: "Recettes de #{user.first_name} #{user.last_name}",
           description: recipe_list
         }
       }
@@ -36,6 +36,7 @@ class RecipesController < ApplicationController
   end
 
   def show
+    @recipe = Recipe.find(params[:id])
   end
 
   def new

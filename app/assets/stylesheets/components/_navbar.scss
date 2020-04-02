@@ -1,5 +1,9 @@
 .navbar-lewagon {
   justify-content: space-between;
+  z-index: 3;
+  background-color: white;
+  //backdrop-filter: blur(4px);
+  border: 2px solid white;
 }
 
 .navbar-lewagon .navbar-collapse {
@@ -8,4 +12,10 @@
 
 .navbar-lewagon .navbar-brand img {
   width: 40px;
+}
+
+@media (max-width: 800px) {
+  .nav-title {
+    display: none;
+  }
 }
