@@ -1,4 +1,6 @@
 class RecipesController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
+
   def index
     if params[:query].present?
       @recipes = Recipe.where("name ILIKE ?", "%#{params[:query]}%")
@@ -57,7 +59,8 @@ class RecipesController < ApplicationController
   end
 
   def update
-    @recipe = Recipe.update(recipe_params)
+    @recipe = Recipe.find(params[:id])
+    @recipe.update(recipe_params)
     redirect_to recipe_path(@recipe)
   end
 
