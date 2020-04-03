@@ -44,8 +44,8 @@ de:
       webpage_by: "Eine Webseite von "
       title: "Rezepte aus Ost-Mosel"
       description: "Eine großartige Initiative, um die Rezepte unserer Großmütter und unserer Kultur an der Ost-Mosel zu bewahren."
-      share_recipe: "Partagez vos recettes"
-      find_recipe: "Decouvrez des recettes"
+      share_recipe: "Teilen Ihre Rezepte"
+      find_recipe: "Entdecken Rezepte"
   recipes:
     index:
       enter_recipe_name: "Schreiben Sie einen Rezeptnamen ein..."
