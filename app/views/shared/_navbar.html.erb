@@ -16,6 +16,11 @@
       <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
         <%= link_to t('.my_profile'), edit_user_registration_path, class: "dropdown-item" %>
         <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <% if request.original_fullpath[0..2] != "/de" %>
+          <%= link_to flag_icon(:de), "#{request.base_url}/de#{request.original_fullpath.gsub(/\/de\/|\/en\/|\/rf\//,"/")}", class: "dropdown-item" %>
+        <% else %>
+          <%= link_to flag_icon(:fr), "#{request.base_url}/#{request.original_fullpath.gsub(/\/de\/|\/en\/|\/rf\//,"")}", class: "dropdown-item" %>
+        <% end %>
       </div>
     </div>
     </div>

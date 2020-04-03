@@ -8,6 +8,9 @@
   background-position: 50%, 50%;
   top: 0;
   z-index: -1;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
 }
 
 .home-title {
@@ -28,6 +31,20 @@
   }
   .buttons {
     margin-top: 24px;
+  }
+}
+
+.home-footer {
+  margin: 16px 64px;
+  width: 100%;
+  color: white;
+  text-shadow: 0 0 8px rgba(0,0,0,0.8);
+  display: flex;
+  justify-content: space-between;
+  a {
+    color: white;
+    text-decoration: underline;
+    font-size: 16px;
   }
 }
 
@@ -56,5 +73,8 @@
       flex-direction: column;
       justify-content: center;
     }
+  }
+  .home-footer {
+    margin: 16px 32px;
   }
 }

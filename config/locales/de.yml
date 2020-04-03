@@ -41,13 +41,14 @@ de:
         connect_with: "Mit %{service} verbinden"
   pages:
     home:
+      webpage_by: "Eine Webseite von "
       title: "Rezepte aus Ost-Mosel"
       description: "Eine großartige Initiative, um die Rezepte unserer Großmütter und unserer Kultur an der Ost-Mosel zu bewahren."
       share_recipe: "Partagez vos recettes"
       find_recipe: "Decouvrez des recettes"
   recipes:
     index:
-      enter_recipe_name: "Entrez un nom de recette..."
+      enter_recipe_name: "Schreiben Sie einen Rezeptnamen ein..."
       search: "Suche"
       by: "von %{user}"
     new:
@@ -55,6 +56,7 @@ de:
     edit:
       change_recipe: "Ändere dein Rezept 🍽"
     show:
+      by: "Von"
       print_recipe: "Rezept drucken"
       change: "Bearbeiten"
       remove: "Entfernen"

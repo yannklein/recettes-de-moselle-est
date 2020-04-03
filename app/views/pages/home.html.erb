@@ -1,4 +1,16 @@
 <div class="home-background">
+  <div class="home-footer">
+    <div>
+      <%= t('.webpage_by') %><%= link_to "Yann Klein", "https://www.yannklein.me" %>
+    </div>
+    <div>
+      <% if request.original_fullpath[0..2] != "/de" %>
+        <%= link_to flag_icon(:de), "#{request.base_url}/de" %>
+      <% else %>
+        <%= link_to flag_icon(:fr), "#{request.base_url}" %>
+      <% end %>
+    </div>
+  </div>
 </div>
 <div class="home-title">
   <h1><%= t('.title') %></h1>

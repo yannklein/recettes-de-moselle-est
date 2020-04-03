@@ -41,6 +41,7 @@ fr:
         connect_with: "Se connecter avec %{service}"
   pages:
     home:
+      webpage_by: "Une page web crée par "
       title: "Recettes de Moselle-Est"
       description: "Une belle initiative pour conserver les recettes de nos grand-mères et notre culture Est-mosellane."
       share_recipe: "Partagez vos recettes"
@@ -55,6 +56,7 @@ fr:
     edit:
       change_recipe: "Modifier votre recette 🍽"
     show:
+      by: "Par"
       print_recipe: "Imprimer la recette"
       change: "Modifier"
       remove: "Supprimer"

@@ -7,7 +7,7 @@
   <div class="banner-title">
     <h1><%= @recipe.name %></h1>
     <div class="banner-owner">
-      <p>Par <strong><%= @recipe.user.first_name %> <%= @recipe.user.last_name %></strong></p>
+      <p><%= t('.by') %> <strong><%= @recipe.user.first_name %> <%= @recipe.user.last_name %></strong></p>
       <%= cl_image_tag @recipe.user.photo.key, alt: @recipe.user.last_name, class: 'avatar' %>
     </div>
     <div class="d-flex">

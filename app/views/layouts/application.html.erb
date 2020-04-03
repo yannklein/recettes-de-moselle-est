@@ -18,8 +18,8 @@
     <%#= stylesheet_pack_tag 'application', media: 'all' %> <!-- Uncomment if you import CSS in app/javascript/packs/application.js -->
   </head>
   <body>
-    <% unless current_page?('/') %>
-      <%= render 'shared/navbar' %>
+    <% unless current_page?(request.original_fullpath.match?(/\/\z|\/de\z|\/en\z|\/rf\z/) ? request.original_fullpath : "") %>
+      <%= render 'shared/navbar', lang: request.original_fullpath.gsub(/\//,"") %>
     <% end %>
     <%= render 'shared/flashes' %>
     <%= yield %>
