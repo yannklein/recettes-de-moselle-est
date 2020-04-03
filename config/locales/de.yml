@@ -49,7 +49,7 @@ de:
     index:
       enter_recipe_name: "Entrez un nom de recette..."
       search: "Suche"
-      by: "von% {user}"
+      by: "von %{user}"
     new:
       share_recipe: "Teile dein Rezept 🍽"
     edit:
