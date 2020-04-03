@@ -2,26 +2,26 @@
   <%= link_to recipes_path, class: "navbar-brand d-flex align-items-center" do %>
   <%# if false %>
     <%= image_tag "faience.png", class: "mr-2" %>
-    <h3 class="m-0 nav-title" >Recettes de Moselle-Est</h3>
+    <h3 class="m-0 nav-title" ><%= t('.mosel_recipes') %></h3>
   <% end %>
   <%# end %>
 
   <% if user_signed_in? %>
     <div class="navbar-nav flex-row">
     <div class="nav-item mr-2">
-      <%= link_to "Partager une recette", new_recipe_path, class: "nav-link text-gray" %>
+      <%= link_to t('.share_recipe'), new_recipe_path, class: "nav-link text-gray" %>
     </div>
     <div class="nav-item dropdown d-flex flex-column align-items-end">
       <%= cl_image_tag current_user.photo.key, class: "avatar dropdown-toggle", id: "navbarDropdown", data: { toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
       <div class="dropdown-menu dropdown-menu-right position-absolute" aria-labelledby="navbarDropdown">
-        <%= link_to "Mon profil", edit_user_registration_path, class: "dropdown-item" %>
-        <%= link_to "Déconnecter", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+        <%= link_to t('.my_profile'), edit_user_registration_path, class: "dropdown-item" %>
+        <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
       </div>
     </div>
     </div>
   <% else %>
     <div class="nav-item">
-      <%= link_to "Se connecter", new_user_session_path, class: "nav-link text-gray" %>
+      <%= link_to t('.connect'), new_user_session_path, class: "nav-link text-gray" %>
     </div>
   <% end %>
 </div>

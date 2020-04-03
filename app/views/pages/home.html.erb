@@ -1,10 +1,10 @@
 <div class="home-background">
 </div>
 <div class="home-title">
-  <h1>Recettes de Moselle-Est</h1>
-  <p>Une belle initiative pour conserver les recettes de nos grand-mères et notre culture Est-mosellane.</p>
+  <h1><%= t('.title') %></h1>
+  <p><%= t('.description') %></p>
   <div class="buttons">
-    <%= link_to "Partagez vos recettes", new_recipe_path, class: "button-white button-boxshadow" %>
-    <%= link_to "Decouvrez des recettes", recipes_path, class: "button-white button-boxshadow" %>
+    <%= link_to t('.share_recipe'), new_recipe_path, class: "button-white button-boxshadow" %>
+    <%= link_to t('.find_recipe'), recipes_path, class: "button-white button-boxshadow" %>
   </div>
 </div>

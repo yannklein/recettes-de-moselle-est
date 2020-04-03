@@ -1,7 +1,7 @@
 <div class="container my-5">
   <div class="row">
     <div class="col-12 col-md-8 col-xl-6">
-      <h2>Se connecter</h2>
+      <h2><%= t('.connection') %></h2>
       <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
         <div class="form-inputs">
           <%= f.input :email,
@@ -10,13 +10,13 @@
                       input_html: { autocomplete: "email" } %>
           <%= f.input :password,
                       required: false,
-                      label: "Mot de passe",
+                      label: t('.password'),
                       input_html: { autocomplete: "current-password" } %>
           <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
         </div>
 
         <div class="form-actions">
-          <%= f.button :submit, "Se connecter", class: "button-white" %>
+          <%= f.button :submit, t('.connect'), class: "button-white" %>
         </div>
       <% end %>
 

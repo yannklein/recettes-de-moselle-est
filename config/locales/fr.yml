@@ -1,0 +1,91 @@
+fr:
+  hello: "Bonjour"
+  devise:
+    registrations:
+      edit:
+        change_profil: 'Modifier mon profil'
+        first_name: "Votre prenom"
+        last_name: "Votre nom de famille"
+        origin_location: "De quelle ville venez-vous?"
+        add_photo: "Votre trombine! Ou n'importe quelle image si vous préférez être discret(e)!"
+        password: "Mot de passe"
+        confirm_password: "Mot de passe, pour confirmation"
+        save_change: "Enregistrer les modifications!"
+        click_here: "Cliquez ici"
+        are_you_sure: "Etes-vous sûr?"
+        back: "Retour"
+      new:
+        registration: 'Inscription'
+        first_name: "Votre prenom"
+        last_name: "Votre nom de famille"
+        origin_location: "De quelle ville venez-vous?"
+        add_photo: "Votre trombine! Ou n'importe quelle image si vous préférez être discret(e)!"
+        password: "Mot de passe"
+        confirm_password: "Mot de passe, pour confirmation"
+        save_change: "Je m'inscris!"
+        subscribe: "Cliquez ici"
+        are_you_sure: "Etes-vous sûr?"
+        back: "Retour"
+    sessions:
+      new:
+        connection: 'Se connecter'
+        password: "Mot de passe"
+        connect: "Se connecter"
+    shared:
+      links:
+        connection: 'Se connecter'
+        register: "S'inscrire"
+        forgot_password: "Mot de passe oublié"
+        confirmation_mail: "Mail de confirmation non reçu?"
+        unlock_instructions: "Instruction de déblockage non reçu?"
+        connect_with: "Se connecter avec %{service}"
+  pages:
+    home:
+      title: "Recettes de Moselle-Est"
+      description: "Une belle initiative pour conserver les recettes de nos grand-mères et notre culture Est-mosellane."
+      share_recipe: "Partagez vos recettes"
+      find_recipe: "Decouvrez des recettes"
+  recipes:
+    index:
+      enter_recipe_name: "Entrez un nom de recette..."
+      search: "Chercher"
+      by: "par %{user}"
+    new:
+      share_recipe: "Partager votre recette 🍽"
+    edit:
+      change_recipe: "Modifier votre recette 🍽"
+    show:
+      print_recipe: "Imprimer la recette"
+      change: "Modifier"
+      remove: "Supprimer"
+      are_you_sure: "Etes-vous sûr?"
+      about_recipe: "A propos de la recette"
+      prep_time: "Temps de preparation:"
+      cook_time: "Temps de cuisson:"
+      guests_amount: "Nombre de convives:"
+      ingredients: "Les ingédients"
+      prep_step: "Les étapes de la preparation"
+      back_to_map: "Retour à la carte des recettes"
+  shared:
+    recipe_form:
+      what_country: 'De quelle partie de Moselle-Est venez-vous?'
+      recipe_title: 'Titre de votre recette:'
+      description: 'Une bonne description:'
+      dish_category: 'Type de plat:'
+      prep_time: 'Temps de preparation (en min):'
+      cook_time: 'Temps de cuisson (en min):'
+      guests_amount: 'Nombre de convives:'
+      ingredients: 'Ingrédients:'
+      add_ingred: "+ Ajouter un ingrédient"
+      prep_step: 'Etapes de la préparation:'
+      add_step: "+ Ajouter une étape"
+      add_photo: 'Et bien sûr, une belle photo👇'
+      photo_hint: "Utilisez une photo de bonne qualité ( plues de 800x600 pixels)"
+      done: "J'ai fini!"
+    navbar:
+      mosel_recipes: "Recettes de Moselle-Est"
+      share_recipe: "Partager une recette"
+      my_profile: "Mon profil"
+      logout: "Déconnecter"
+      connect: "Se connecter"
+

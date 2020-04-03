@@ -11,10 +11,10 @@
       <%= cl_image_tag @recipe.user.photo.key, alt: @recipe.user.last_name, class: 'avatar' %>
     </div>
     <div class="d-flex">
-      <%= link_to "Imprimer la recette", recipe_path(@recipe), class: 'button-white'%>
+      <%= link_to t('.print_recipe'), recipe_path(@recipe), class: 'button-white'%>
       <% if current_user === @recipe.user %>
-        <%= link_to "Modifier", edit_recipe_path(@recipe), class: 'button-white'%>
-        <%= link_to "Supprimer", recipe_path(@recipe), data: { confirm: "Are you sure?" }, method: :delete, class: 'button-white'%>
+        <%= link_to t('.change'), edit_recipe_path(@recipe), class: 'button-white'%>
+        <%= link_to t('.remove'), recipe_path(@recipe), data: { confirm: t('.are_you_sure') }, method: :delete, class: 'button-white'%>
       <% end %>
     </div>
   </div>
@@ -23,16 +23,16 @@
   <div class="recipe">
 
     <div class="recipe-description">
-      <h2>A propos de la recette</h2>
+      <h2><%= t('.about_recipe') %></h2>
       <p><%= @recipe.description %></p>
       <div class="recipe-description-figures">
-        <p>Temps de preparation: <%= @recipe.prep_time %></p>
-        <p>Temps de cuisson: <%= @recipe.cook_time %></p>
-        <p>Nombre de convives: <%= @recipe.guests_amount %></p>
+        <p><%= t('.prep_time') %> <%= @recipe.prep_time %></p>
+        <p><%= t('.cook_time') %> <%= @recipe.cook_time %></p>
+        <p><%= t('.guests_amount') %> <%= @recipe.guests_amount %></p>
       </div>
     </div>
     <div class="recipe-ingredients">
-      <h2>Les ingédients</h2>
+      <h2><%= t('.ingredients') %></h2>
       <ul>
         <% @recipe.ingredient.each do |item| %>
           <li><%= item.split(':')[0] %><%= item.split(':')[1].nil? ? "" : ": #{item.split(':')[1]}" %></li>
@@ -40,13 +40,13 @@
       </ul>
     </div>
     <div class="recipe-steps">
-      <h2>Les étapes de la preparation</h2>
+      <h2><%= t('.prep_step') %></h2>
       <ol>
         <% @recipe.prep_step.each do |step| %>
           <li><%= step %></li>
         <% end %>
       </ol>
     </div>
-    <%= link_to "Retour à la carte des recettes", recipes_path, class: 'button-white'%>
+    <%= link_to t('.back_to_map'), recipes_path, class: 'button-white'%>
   </div>
 </div>

@@ -5,9 +5,9 @@
     <div class="app-container">
       <div>
         <%= form_tag recipes_path, class: "form-inline", method: :get do %>
-          <%= text_field_tag :query, params[:query], class: "form-control, searchbar-white", placeholder: "Entrez un nom de recette..."
+          <%= text_field_tag :query, params[:query], class: "form-control, searchbar-white", placeholder: t('.enter_recipe_name')
           %>
-          <%= submit_tag "Chercher", class: "button-search" %>
+          <%= submit_tag t('.search'), class: "button-search" %>
         <% end %>
       </div>
       <div class="recipes-filters">
@@ -34,7 +34,7 @@
               <div class="card-recipe-info">
                 <h3><%= recipe.name %></h3>
                 <p class="card-recipe-long-desc"><%= recipe.description %></p>
-                <p class="card-recipe-short-desc"><%= "par #{recipe.user.first_name} #{recipe.user.last_name}" %></p>
+                <p class="card-recipe-short-desc"><%= t('.by', user: "#{recipe.user.first_name} #{recipe.user.last_name}") %></p>
               </div>
             <% end %>
           </div>

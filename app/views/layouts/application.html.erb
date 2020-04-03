@@ -7,6 +7,10 @@
     <meta name="mobile-web-app-capable"  content="yes">
     <link rel="manifest" href="<%= asset_path 'manifest.json' %>">
     <%= render 'shared/ios_pwa_links' %>
+    <link rel="alternate" href="https://recettes-de-moselle-est.herokuapp.com/en" hreflang="en-GB" />
+    <link rel="alternate" href="https://recettes-de-moselle-est.herokuapp.com/rf" hreflang="de-FR" />
+    <link rel="alternate" href="https://recettes-de-moselle-est.herokuapp.com/de" hreflang="de-DE" />
+
     <title>Recettes de Moselle-Est</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>

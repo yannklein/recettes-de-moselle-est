@@ -1,0 +1,90 @@
+de:
+  hello: "Guten Tag"
+  devise:
+    registrations:
+      edit:
+        change_profil: 'Mein Profil ändern'
+        first_name: "Ihr Vorname"
+        last_name: "Ihr Nachname"
+        origin_location: "Aus welcher Stadt kommen Sie?"
+        add_photo: "Deine Posaune! Oder irgendein Bild, wenn Sie lieber diskret sein möchten!"
+        password: "Passwort"
+        confirm_password: "Passwort, zur Bestätigung"
+        save_change: "Änderungen speichern!"
+        click_here: "Hier klicken"
+        are_you_sure: "Bist du sicher?"
+        back: "Zurück"
+      new:
+        registration: 'Registrierung'
+        first_name: "Ihr Vorname"
+        last_name: "Ihr Nachname"
+        origin_location: "Aus welcher Stadt kommen Sie?"
+        add_photo: "Deine Posaune! Oder irgendein Bild, wenn Sie lieber diskret sein möchten!"
+        password: "Passwort"
+        confirm_password: "Passwort, zur Bestätigung"
+        save_change: "Änderungen speichern!"
+        subscribe: "Hier klicken"
+        are_you_sure: "Bist du sicher?"
+        back: "Zurück"
+    sessions:
+      new:
+        connection: 'Verbinden'
+        password: "Passwort"
+        connect: "Verbinden"
+    shared:
+      links:
+        connection: 'Verbinden'
+        register: "Registrieren"
+        forgot_password: "Passwort vergessen"
+        confirmation_mail: "Bestätigungs-E-Mail nicht erhalten?"
+        unlock_instructions: "Entsperranweisung nicht erhalten?"
+        connect_with: "Mit %{service} verbinden"
+  pages:
+    home:
+      title: "Rezepte aus Ost-Mosel"
+      description: "Eine großartige Initiative, um die Rezepte unserer Großmütter und unserer Kultur an der Ost-Mosel zu bewahren."
+      share_recipe: "Partagez vos recettes"
+      find_recipe: "Decouvrez des recettes"
+  recipes:
+    index:
+      enter_recipe_name: "Entrez un nom de recette..."
+      search: "Suche"
+      by: "von% {user}"
+    new:
+      share_recipe: "Teile dein Rezept 🍽"
+    edit:
+      change_recipe: "Ändere dein Rezept 🍽"
+    show:
+      print_recipe: "Rezept drucken"
+      change: "Bearbeiten"
+      remove: "Entfernen"
+      are_you_sure: "Bist du sicher?"
+      about_recipe: "Über das Rezept"
+      prep_time: "Vorbereitungszeit:"
+      cook_time: "Garzeit:"
+      guests_amount: "Anzahl der Gäste:"
+      ingredients: "Die Zutaten"
+      prep_step: "Die Vorbereitungsstufen"
+      back_to_map: "Zurück zur Rezeptkarte"
+  shared:
+    recipe_form:
+      what_country: 'Aus welchem ​​Teil von Ost-Mosel kommst du?'
+      recipe_title: 'Titel Ihres Rezepts:'
+      description: 'Eine gute Beschreibung:'
+      dish_category: 'Art des Gerichts:'
+      prep_time: 'Vorbereitungszeit (in Min):'
+      cook_time: 'Garzeit (in Min):'
+      guests_amount: 'Anzahl der Gäste:'
+      ingredients: 'Zutaten:'
+      add_ingred: "+ Zutat hinzufügen"
+      prep_step: 'Vorbereitungsschritte:'
+      add_step: "+ Schritt hinzufügen"
+      add_photo: 'Und natürlich ein schönes Foto👇'
+      photo_hint: "Verwenden Sie ein Foto von guter Qualität (größer als 800 x 600 Pixel)"
+    navbar:
+      mosel_recipes: "Rezepte aus Ost-Mosel"
+      share_recipe: "Rezept teilen"
+      my_profile: "Mein Profil"
+      logout: "Trennen"
+      connect: "Verbinden"
+
