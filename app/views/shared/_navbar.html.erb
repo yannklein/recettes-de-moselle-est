@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <%= link_to recipes_path, class: "navbar-brand d-flex align-items-center" do %>
   <%# if false %>
-    <%= image_tag "faience.png", class: "mr-2" %>
+    <%= image_tag "faience.png", class: "mr-2 navbar-logo" %>
     <h3 class="m-0 nav-title" ><%= t('.mosel_recipes') %></h3>
   <% end %>
   <%# end %>
@@ -17,9 +17,9 @@
         <%= link_to t('.my_profile'), edit_user_registration_path, class: "dropdown-item" %>
         <%= link_to t('.logout'), destroy_user_session_path, method: :delete, class: "dropdown-item" %>
         <% if request.original_fullpath[0..2] != "/de" %>
-          <%= link_to flag_icon(:de), "#{request.base_url}/de#{request.original_fullpath.gsub(/\/de\/|\/en\/|\/rf\//,"/")}", class: "dropdown-item" %>
+          <%= link_to flag_icon(:de), "#{request.base_url}/de#{request.original_fullpath.gsub(/\/de\/|\/en\/|\/fl\//,"/")}", class: "dropdown-item" %>
         <% else %>
-          <%= link_to flag_icon(:fr), "#{request.base_url}/#{request.original_fullpath.gsub(/\/de\/|\/en\/|\/rf\//,"")}", class: "dropdown-item" %>
+          <%= link_to flag_icon(:fr), "#{request.base_url}/#{request.original_fullpath.gsub(/\/de\/|\/en\/|\/fl\//,"")}", class: "dropdown-item" %>
         <% end %>
       </div>
     </div>

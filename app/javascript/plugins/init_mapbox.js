@@ -39,7 +39,7 @@ const createMarker = (data, map, markerIcon) => {
   });
 
   document.querySelectorAll('.marker').forEach((marker) => {
-    marker.style.backgroundImage = `url('.${markerIcon}')`;
+    marker.innerHTML = `<img class='marker-img' src='.${markerIcon}' alt='marker'/>`
   });
 }
 
