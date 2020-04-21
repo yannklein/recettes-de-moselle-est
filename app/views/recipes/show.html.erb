@@ -1,6 +1,6 @@
 <div class="banner">
   <% if @recipe.photo.attached? %>
-    <%= cl_image_tag @recipe.photo.key, alt: @recipe.name %>
+    <%= cl_image_tag @recipe.photo.key, angle: :ignore, alt: @recipe.name %>
   <% else %>
     <%= image_tag "https://g.foolcdn.com/editorial/images/167482/vegetables-colorful-array.jpg", alt: @recipe.name%>
   <% end %>
