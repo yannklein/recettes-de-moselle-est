@@ -1,0 +1,5 @@
+meta_product_name: "Recettes de Moselle-Est"
+meta_title: "Recettes de Moselle-Est - Conserver nos traditions culinaires mosellanes"
+meta_description: "Une belle initiative pour conserver les recettes de nos grand-mères et notre culture Est-mosellane."
+meta_image: "bitche.jpg" # should exist in `app/assets/images/`
+twitter_account: "@yannlucklein"   # required for Twitter Cards
