@@ -2,7 +2,7 @@
   display: flex;
   width: 100%;
   > img {
-    width: 50%;
+    width: 35%;
     height: 300px;
     object-fit: cover;
     filter: brightness(90%);
@@ -15,7 +15,7 @@
   flex-direction: column;
   display: flex;
   justify-content: center;
-  margin-left: 64px;
+  margin-left: 80px;
   //align-items: flex-end;
   h1 {
     margin-bottom: 16px;
