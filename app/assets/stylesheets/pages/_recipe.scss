@@ -20,9 +20,16 @@
   }
 }
 
-@media (max-width: 800px) {
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
+
+@media screen and (max-width: 800px) {
   .recipe-description-figures {
     align-items: start;
     flex-direction: column;
   }
 }
+

@@ -10,8 +10,8 @@
       <p><%= t('.by') %> <strong><%= @recipe.user.first_name %> <%= @recipe.user.last_name %></strong></p>
       <%= cl_image_tag @recipe.user.photo.key, alt: @recipe.user.last_name, class: 'avatar' %>
     </div>
-    <div class="d-flex">
-      <%= link_to t('.print_recipe'), recipe_path(@recipe), class: 'button-white'%>
+    <div class="d-flex no-print">
+      <%= link_to t('.print_recipe'), recipe_path(@recipe), :onclick => 'window.print();return false;', class: 'button-white'%>
       <% if current_user === @recipe.user %>
         <%= link_to t('.change'), edit_recipe_path(@recipe), class: 'button-white'%>
         <%= link_to t('.remove'), recipe_path(@recipe), data: { confirm: t('.are_you_sure') }, method: :delete, class: 'button-white'%>
@@ -47,6 +47,6 @@
         <% end %>
       </ol>
     </div>
-    <%= link_to t('.back_to_map'), recipes_path, class: 'button-white'%>
+    <%= link_to t('.back_to_map'), recipes_path, class: 'button-white no-print'%>
   </div>
 </div>

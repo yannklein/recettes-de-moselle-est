@@ -34,10 +34,10 @@
   }
 }
 
-@media (max-width: 1000px) {
+@media screen and (max-width: 1000px) {
 }
 
-@media (max-width: 800px) {
+@media screen and (max-width: 800px) {
   .banner {
     display: block;
     > img {
@@ -47,6 +47,12 @@
   .banner-title {
     margin-top: 16px;
     margin-left: 16px;
+  }
+}
+
+@media print {
+  .banner-title {
+    margin-left: 32px;
   }
 }
 
