@@ -25,12 +25,12 @@
             <%= link_to recipe_path(recipe) do %>
               <div class="card-recipe-img">
                 <% if recipe.photo.attached? %>
-                  <%= cl_image_tag recipe.photo.key, angle: :ignore, width: 160, height: 160, crop: :fill, alt: recipe.name%>
+                  <%= cl_image_tag recipe.photo.key, angle: :exif, width: 160, height: 160, crop: :fill, alt: recipe.name%>
                 <% else %>
                   <%= image_tag "https://g.foolcdn.com/editorial/images/167482/vegetables-colorful-array.jpg", width: 160, height: 160, alt: recipe.name, style: "object-fit: cover;"%>
                 <% end %>
               </div>
-              <%= cl_image_tag recipe.user.photo.key, angle: :ignore, alt: recipe.name, class: "avatar-large avatar-bordered"%>
+              <%= cl_image_tag recipe.user.photo.key, angle: :exif, alt: recipe.name, class: "avatar-large avatar-bordered"%>
               <div class="card-recipe-info">
                 <h3><%= recipe.name %></h3>
                 <p class="card-recipe-long-desc">
