@@ -33,7 +33,13 @@
               <%= cl_image_tag recipe.user.photo.key, alt: recipe.name, class: "avatar-large avatar-bordered"%>
               <div class="card-recipe-info">
                 <h3><%= recipe.name %></h3>
-                <p class="card-recipe-long-desc"><%= recipe.description %></p>
+                <p class="card-recipe-long-desc">
+                  <% if recipe.description.size >= 140 %>
+                   <p> <%= recipe.description.first(140) %>...</p>
+                  <% else %>
+                    <p> <%= recipe.description %></p>
+                  <% end %>
+                </p>
                 <p class="card-recipe-short-desc"><%= t('.by', user: "#{recipe.user.first_name} #{recipe.user.last_name}") %></p>
               </div>
             <% end %>

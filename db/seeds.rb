@@ -31,6 +31,7 @@ Country.create!(name: 'Pays de Nied', description: 'Le Pays de Nied est le plate
 Country.create!(name: 'Pays des Lacs', description: 'Le Pays des Lacs entre l’ancien bassin houiller et le Pays de Bitche très vallonné, conjugue un développement entre élevage, forêts et étangs. ')
 Country.create!(name: 'Pays de Bitche', description: 'Le Pays de Bitche est formé d’un isthme au nord-est du département. Sa partie orientale très boisée a une vocation forestière et touristique tandis que la partie occidentale conserve un paysage agricole')
 Country.create!(name: 'Vosges du Nord', description: 'Le Parc naturel régional des Vosges du Nord se situe à cheval sur le département de la Moselle et le Bas-Rhin.')
+Country.create!(name: 'Pays du Saulnois', description: 'Le Saulnois, ou pays du sel (Salzgau en allemand), est une région naturelle rurale du sud de la Moselle dont une petite partie - au sens territorial - se situe en Meurthe-et-Moselle.')
 
 # Create category
 puts "Category creation..."
