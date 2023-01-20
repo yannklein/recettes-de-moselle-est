@@ -1,12 +1,14 @@
-source 'https://rubygems.org'
-ruby '2.6.6'
+source "https://rubygems.org"
+git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
+ruby "3.0.3"
 
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
-gem 'pg', '~> 0.21'
+gem 'pg'
 gem 'puma'
-gem 'rails', '5.2.4.1'
+gem 'rails', '~> 6.1'
 gem 'redis'
 
 gem 'autoprefixer-rails'
@@ -16,7 +18,7 @@ gem 'simple_form'
 gem 'uglifier'
 gem 'webpacker'
 
-gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'master'
+gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
 gem 'cloudinary', '~> 1.12.0'
 gem 'geocoder'
 gem 'flag-icons-rails'
