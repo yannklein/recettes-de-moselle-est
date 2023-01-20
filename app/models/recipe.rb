@@ -3,5 +3,5 @@ class Recipe < ApplicationRecord
   belongs_to :country, foreign_key: "recettes_de_mos_country_id"
   belongs_to :category, foreign_key: "recettes_de_mos_category_id"
   belongs_to :user
-  has_one_attached :photo, foreign_key: "recettes_de_mos_recipe_id"
+  has_one_attached :photo
 end
