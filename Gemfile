@@ -6,7 +6,7 @@ ruby "3.0.3"
 gem 'bootsnap', require: false
 gem 'devise'
 gem 'jbuilder', '~> 2.0'
-gem 'pg'
+gem "pg", "~> 1.1"
 gem 'puma'
 gem 'rails', '~> 6.1'
 gem 'redis'
@@ -19,7 +19,7 @@ gem 'uglifier'
 gem 'webpacker'
 
 gem 'faker', :git => 'https://github.com/faker-ruby/faker.git', :branch => 'main'
-gem 'cloudinary', '~> 1.12.0'
+gem 'cloudinary'
 gem 'geocoder'
 gem 'flag-icons-rails'
 
