@@ -11,7 +11,7 @@ class RecipesController < ApplicationController
     end
 
     @geojson = []
-    @users.each do |user|
+    @users.geocoded.each do |user|
       recipe_list = user.recipes.map do |recipe|
         { name: recipe.name,
           description: recipe.description,
